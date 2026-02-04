@@ -1,134 +1,86 @@
-# Todo List Vibe
+# FAST Channel Engine
+> *Open Source Sustainable FAST Channel Engine*
 
-A full-stack todo list application with a modern, clean interface. Built with Node.js, Express, MariaDB, and vanilla JavaScript.
+<div align="center">
 
-## Features
+  ### Quick Demo: Open Source Cloud
 
-- **Create, Read, Update, Delete** - Full CRUD operations for managing todos
-- **Mark Complete** - Toggle todos between active and completed states
-- **Filter Todos** - View all, active, or completed todos
-- **Persistent Storage** - Todos are stored in a MariaDB database
-- **Responsive Design** - Works seamlessly on desktop and mobile devices
-- **Dark Mode** - Automatic dark mode based on system preferences
-- **Modern UI** - Clean, gradient-styled interface with smooth animations
+  Run this service in the cloud with a single click.
 
-## Tech Stack
+  [![Badge OSC](https://img.shields.io/badge/Try%20it%20out!-1E3A8A?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTIiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcl8yODIxXzMxNjcyKSIvPgo8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSI3IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhcl8yODIxXzMxNjcyIiB4MT0iMTIiIHkxPSIwIiB4Mj0iMTIiIHkyPSIyNCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjQzE4M0ZGIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzREQzlGRiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=)](https://app.osaas.io/browse/docker-fast)
 
-**Backend:**
-- Node.js
-- Express.js
-- MariaDB
+</div>
 
-**Frontend:**
-- HTML5
-- CSS3 (with CSS variables and animations)
-- Vanilla JavaScript (ES6+)
+[![Slack](http://slack.streamingtech.se/badge.svg)](http://slack.streamingtech.se)
 
-## Project Structure
+[![Badge OSC](https://img.shields.io/badge/Evaluate-24243B?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTIiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcl8yODIxXzMxNjcyKSIvPgo8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSI3IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhcl8yODIxXzMxNjcyIiB4MT0iMTIiIHkxPSIwIiB4Mj0iMTIiIHkyPSIyNCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjQzE4M0ZGIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzREQzlGRiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=)](https://app.osaas.io/browse/channel-engine)
 
-```
-todo-app/
-├── backend/
-│   ├── server.js        # Express API server
-│   ├── package.json     # Backend dependencies
-│   ├── .env.example     # Environment variables template
-│   └── .env             # Your local environment config (not committed)
-├── frontend/
-│   ├── index.html       # Main HTML page
-│   ├── styles.css       # Stylesheet with dark mode support
-│   └── app.js           # Frontend JavaScript application
-├── .gitignore
-└── README.md
-```
+[ [DOCS](https://fast.docs.eyevinn.technology) | [DEMO](https://vod2live.eyevinn.technology) ]
 
-## Prerequisites
+The FAST Channel Engine is a sustainable FAST Channel Engine based on VOD2Live technology and the open source [Channel Engine library](https://vod2live.docs.eyevinn.technology) from Eyevinn Technology.
 
-- Node.js 18.0.0 or higher
-- MariaDB database
+![Screenshot multiview](docs/images/ui-screenshot.png)
 
-## Installation
+## Quick Start
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/JuiceAndTheJoe/todo-list-vibe.git
-   cd todo-list-vibe
-   ```
-
-2. **Install backend dependencies**
-   ```bash
-   cd backend
-   npm install
-   ```
-
-3. **Configure environment variables**
-
-   Copy the example environment file and update with your database credentials:
-   ```bash
-   cp .env.example .env
-   ```
-
-   Edit `.env` with your MariaDB connection details:
-   ```
-   DB_HOST=your-database-host
-   DB_PORT=3306
-   DB_USER=your-database-user
-   DB_PASSWORD=your-database-password
-   DB_NAME=todos
-   PORT=3000
-   NODE_ENV=development
-   ```
-
-## Running the Application
-
-### Development Mode
-
-In development, you need to run the backend and frontend separately:
-
-1. **Start the backend API server** (runs on port 3000):
-   ```bash
-   cd backend
-   npm run dev
-   ```
-
-2. **Serve the frontend** using any static file server. For example:
-   ```bash
-   cd frontend
-   npx serve -p 8080
-   ```
-   Or simply open `frontend/index.html` directly in your browser.
-
-3. **Access the application** at `http://localhost:8080` (or wherever your frontend server is running). The frontend will automatically connect to the backend API at `http://localhost:3000`.
-
-### Production Mode
-
-In production, the backend serves both the API and frontend from a single server:
+To spin up a Schedule Service and FAST Channel Engine.
 
 ```bash
-cd backend
-NODE_ENV=production npm start
+curl -SL https://github.com/Eyevinn/docker-fast/releases/download/v0.2.0/docker-compose.yml | docker-compose -f - up
 ```
 
-Access the application at `http://localhost:3000`.
+A demo channel called `eyevinn` is created by default. To get the schedule for a specific date `YYYY-MM-DD`.
 
-## API Endpoints
+```bash
+curl -X 'GET' \
+  'http://localhost:8080/api/v1/channels/eyevinn/schedule?date=YYYY-MM-DD' \
+  -H 'accept: application/json'
+```
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/todos` | Get all todos |
-| GET | `/api/todos/:id` | Get a single todo |
-| POST | `/api/todos` | Create a new todo |
-| PUT | `/api/todos/:id` | Update a todo |
-| DELETE | `/api/todos/:id` | Delete a todo |
-| GET | `/api/health` | Health check endpoint |
+And to play the channel direct your HLS video player to the URL [http://localhost:8000/channels/eyevinn/master.m3u8](http://web.player.eyevinn.technology/?manifest=http%3A%2F%2Flocalhost%3A8000%2Fchannels%2Feyevinn%2Fmaster.m3u8)
 
-## Usage
+You might need to wait a few minutes first for the channel to be ready.
 
-- **Add a todo** - Type in the input field and click "Add" or press Enter
-- **Complete a todo** - Click the checkbox next to a todo
-- **Delete a todo** - Hover over a todo and click the trash icon
-- **Filter todos** - Use the All/Active/Completed buttons to filter the list
-- **Clear completed** - Click "Clear completed" to remove all completed todos
+## Contributing
 
-## License
+If you're interested in contributing to the project:
 
-MIT
+- We welcome all people who want to contribute in a healthy and constructive manner within our community. To help us create a safe and positive community experience for all, we require all participants to adhere to the [Code of Conduct](CODE_OF_CONDUCT.md).
+- If you are looking to make a code change create a Pull Request with suggested changes.
+- Develop and contribute with scheduling service plugins.
+- Report, triage bugs or suggest enhancements.
+- Help others by answering questions.
+
+## License (Apache-2.0)
+
+```
+Copyright 2022 Eyevinn Technology AB
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
+
+## Support
+
+Join our [community on Slack](http://slack.streamingtech.se) where you can post any questions regarding any of our open source projects. Eyevinn's consulting business can also offer you:
+
+- Further development of this component
+- Customization and integration of this component into your platform
+- Support and maintenance agreement
+
+Contact [sales@eyevinn.se](mailto:sales@eyevinn.se) if you are interested.
+
+## About Eyevinn Technology
+
+[Eyevinn Technology](https://www.eyevinntechnology.se) is an independent consultant firm specialized in video and streaming. Independent in a way that we are not commercially tied to any platform or technology vendor. As our way to innovate and push the industry forward we develop proof-of-concepts and tools. The things we learn and the code we write we share with the industry in [blogs](https://dev.to/video) and by open sourcing the code we have written.
+
+Want to know more about Eyevinn and how it is to work here. Contact us at work@eyevinn.se!
